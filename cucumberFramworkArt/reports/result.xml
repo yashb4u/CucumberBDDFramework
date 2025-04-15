@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="28.122" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="test Login functionality for &quot;https://bookcart.azurewebsites.net/&quot;" name="Login success test" time="15.568">
+<system-out><![CDATA[
+And Click on login..........................................................passed
+And Enter usename as "ortoni"...............................................passed
+And Enter password as "Pass1234"............................................passed
+When Click on Login button..................................................passed
+Then Login should be success................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test Login functionality for &quot;https://bookcart.azurewebsites.net/&quot;" name="Login shoulde be fail" time="12.31">
+<failure type="java.lang.AssertionError" message="Login should be failed but user element found. expected [false] but found [true]">
+<![CDATA[java.lang.AssertionError: Login should be failed but user element found. expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at pages.Login.loginShouldBefailed(Login.java:55)
+	at ✽.Login should be failed(file:///C:/Users/ABHI/eclipse-workspace/cucumberFramworkArt/src/test/java/story/test1.feature:20)
+]]>
+</failure>
+<system-out><![CDATA[
+And Click on login..........................................................passed
+And Enter usename as "ortoni"...............................................passed
+And Enter password as "Pass1234"............................................passed
+When Click on Login button..................................................passed
+But Login should be failed..................................................failed
+]]></system-out>
+</testcase>
+</testsuite>
+org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ABHI\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58880}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58880/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5971fb592788330edb1796e5fff9ff75
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.HomePage.clickOnClearCartButton(HomePage.java:31)
+	at ✽.click on clear cart button(file:///C:/Users/ABHI/eclipse-workspace/cucumberFramworkArt/src/test/java/story/test2.feature:11)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Click on login........................................................passed
+And Enter usename as "ortoni"...............................................passed
+And Enter password as "Pass1234"............................................passed
+When Click on Login button..................................................passed
+Then Login should be success................................................passed
+And click on Add to Cart button for first book..............................passed
+And click on cart link......................................................passed
+When click on clear cart button.............................................failed
+Then cart should be empty...................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
